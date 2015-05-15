@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+  Student Name: ...
+  URL: http://omega.uta.edu/...
+-->
+<html lang="en">
+    <head>
+    <title>Display Movie Information</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="movies.js"></script>
+        <style>
+            #filmList{
+                width:350px;
+                float:left;
+                padding:10px;
+            }
+            #filmInfo{
+                width:350px;
+                display:inline-block;
+                padding:10px;
+            }
+            #castInfo{
+                width: 200px;
+                margin-top: 10px;
+                padding:10px;
+                clear: Both;
+            }
+            .summary {
+                width: 200px;
+                }
+            .title{
+                width: 150px;
+            }
+        </style>
+  </head>
+  <body onload="initialize();">
+    <form>
+        <label>Movie title: <input type="text" id="form-input"/></label>
+        <input type="button" onclick="sendRequest();" value="Display Info"/>
+   </form>
+        <br><br>
+        <div id="filmList">&nbsp;
+        </div>
+        <div id="filmInfo" >
+        </div>
+        <div id="castInfo">
+        </div>
+        <div id="output">&nbsp;
+        </div>
+  </body>
+</html>
