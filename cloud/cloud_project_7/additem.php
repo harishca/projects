@@ -42,8 +42,8 @@ use Aws\DynamoDb\Enum\Type;
 use Aws\S3\S3Client;
 $client = DynamoDbClient::factory(array(
    'credentials' => array(
-        'key'    => 'AKIAJRFYSARNCQ2FGBHA',
-        'secret' => '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'
+        'key'    => '',
+        'secret' => ''
     ),
          'region' => 'us-east-1'
 ));

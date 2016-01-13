@@ -23,7 +23,7 @@ $password= $_POST['password'];
 $fullname= $_POST['fullname'];
 $emailid =$_POST['emailid'];
 try{
-$dbh = new PDO("mysql:host=project7.c52ndx7xtxxn.us-east-1.rds.amazonaws.com:3306;dbname=project7","root","root1234",array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+$dbh = new PDO("","root","root1234",array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 $dbh->exec('insert into users values("'.$username.'","' . md5("$password") . '","'.$fullname.'","'.$emailid.'")');
 header("location:index.php");
 echo "Inserted into DB";

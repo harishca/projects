@@ -20,7 +20,7 @@ if(isset($_SESSION)&&isset($_SESSION['username'])&&isset($_SESSION['password']))
 $username=$_SESSION['username'];
 $password=$_SESSION['password'];
 try {
-  $dbh = new PDO("mysql:host=project7.c52ndx7xtxxn.us-east-1.rds.amazonaws.com:3306;dbname=project7","root","root1234",array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+  $dbh = new PDO("","root","root1234",array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
   $dbh->beginTransaction();
   $stmt = $dbh->prepare("select * from users where username= :name and password= :password") or die(print_r($db->errorInfo(), true));;
   $stmt->bindParam(':name',$username);
@@ -42,7 +42,7 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
 $username=$_POST['username'];
 $password=md5($_POST['password']);
 try {
-  $dbh = new PDO("mysql:host=project7.c52ndx7xtxxn.us-east-1.rds.amazonaws.com:3306;dbname=project7","root","root1234",array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+  $dbh = new PDO("","root","root1234",array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
   $dbh->beginTransaction();
   $stmt = $dbh->prepare("select * from users where username= :name and password= :password") or die(print_r($db->errorInfo(), true));;
   $stmt->bindParam(':name',$username);
